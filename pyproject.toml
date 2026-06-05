@@ -1,0 +1,26 @@
+[project]
+name = "autoresearch-after-effects-finetune"
+version = "0.1.0"
+description = "MLX LoRA fine-tuning pipeline for After Effects JSX generation"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "datasets>=4.3.0",
+    "huggingface-hub>=0.36.0",
+    "mlx-lm[train]>=0.31.3; sys_platform == 'darwin' and platform_machine == 'arm64'",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["after_effects_pipeline*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

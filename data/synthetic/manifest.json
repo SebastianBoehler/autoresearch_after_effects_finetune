@@ -1,0 +1,90 @@
+{
+  "cases": [
+    {
+      "case_id": "kinetic_type_reveal",
+      "template": "kinetic_type_reveal.jsx",
+      "prompt": "Create a 6-second 1920x1080 After Effects intro with a dark background, kinetic headline text, a subtitle, and three animated accent bars.",
+      "tags": ["synthetic-v1", "typography", "intro", "shape-layers", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "layers.addText", "setValueAtTime", "ADBE Vector Shape - Rect"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Kinetic Type Reveal",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 6,
+        "frame_rate": 30,
+        "min_layers": 5,
+        "render_frame": 45
+      }
+    },
+    {
+      "case_id": "metric_dashboard_pulse",
+      "template": "metric_dashboard_pulse.jsx",
+      "prompt": "Create a clean 8-second After Effects dashboard animation with four KPI cards, animated progress bars, and a pulsing status dot.",
+      "tags": ["synthetic-v1", "dashboard", "data-visualization", "shape-layers", "expressions"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Graphic - Fill", "setValueAtTime", ".expression"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Metric Dashboard Pulse",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 8,
+        "frame_rate": 30,
+        "min_layers": 10,
+        "render_frame": 90
+      }
+    },
+    {
+      "case_id": "orbiting_concept_map",
+      "template": "orbiting_concept_map.jsx",
+      "prompt": "Create a 7-second educational concept-map animation with a central topic, orbiting nodes, connector lines, and subtle looping motion expressions.",
+      "tags": ["synthetic-v1", "education", "concept-map", "expressions", "shape-layers"],
+      "must_contain": ["layers.addShape", "layers.addText", ".expression", "ADBE Vector Shape - Ellipse"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Orbiting Concept Map",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 7,
+        "frame_rate": 30,
+        "min_layers": 9,
+        "render_frame": 75
+      }
+    },
+    {
+      "case_id": "product_reveal_split",
+      "template": "product_reveal_split.jsx",
+      "prompt": "Create a 5-second product reveal with a split background, sliding panels, a product placeholder, title text, and a call-to-action chip.",
+      "tags": ["synthetic-v1", "product", "reveal", "motion-graphics", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "setValueAtTime", "ADBE Vector Shape - Rect", "layers.addText"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Product Reveal Split",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 5,
+        "frame_rate": 30,
+        "min_layers": 7,
+        "render_frame": 55
+      }
+    },
+    {
+      "case_id": "timeline_milestone_rise",
+      "template": "timeline_milestone_rise.jsx",
+      "prompt": "Create a 9-second timeline explainer with four milestones that rise in sequence, labels, dates, and a progress line that draws across the screen.",
+      "tags": ["synthetic-v1", "timeline", "explainer", "shape-layers", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "setValueAtTime", "ADBE Vector Shape - Rect", "layers.addText"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Timeline Milestone Rise",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 9,
+        "frame_rate": 30,
+        "min_layers": 12,
+        "render_frame": 120
+      }
+    }
+  ]
+}
+
