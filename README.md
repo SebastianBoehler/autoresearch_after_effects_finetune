@@ -106,3 +106,7 @@ Rows live in `data/after_effects_synthetic_cases.jsonl` and use this shape:
 
 The default policy is provenance-first. Do not train on copied Adobe docs or
 unlicensed public snippets just because they compile.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
