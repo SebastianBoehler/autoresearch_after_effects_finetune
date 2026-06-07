@@ -1,0 +1,112 @@
+{
+  "cases": [
+    {
+      "case_id": "fluid_noise_map_loop",
+      "template": "fluid_noise_map_loop.jsx",
+      "prompt": "Create a 6-second square abstract fluid-map loop with colorful animated flow bands, sharp flow cells, loop scanner, and procedural-looking motion controls.",
+      "tags": ["synthetic-v10", "fluid-map", "abstract-effects", "loop", "noise", "square", "expressions"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "ADBE Vector Shape - Ellipse", ".expression"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Fluid Noise Map Loop",
+        "width": 1080,
+        "height": 1080,
+        "duration_seconds": 6,
+        "frame_rate": 30,
+        "min_layers": 30,
+        "render_frame": 90
+      },
+      "inspiration_sources": ["aescripts Fluid Map flow/noise category", "looping abstract effect templates", "procedural motion control UI conventions"]
+    },
+    {
+      "case_id": "flipbook_page_turn_story",
+      "template": "flipbook_page_turn_story.jsx",
+      "prompt": "Create a 7-second 3D flipbook-style story opener with table surface, page stacks, animated page turns, image blocks, and control-caption typography.",
+      "tags": ["synthetic-v10", "flipbook", "page-turn", "3d", "slideshow", "story", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "threeDLayer", "setValueAtTime"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Flipbook Page Turn Story",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 7,
+        "frame_rate": 30,
+        "min_layers": 18,
+        "render_frame": 105
+      },
+      "inspiration_sources": ["Creation Effects 3D Flip Book template category", "page-turn slideshow conventions", "magazine flip animation controls"]
+    },
+    {
+      "case_id": "earth_zoom_location_reveal",
+      "template": "earth_zoom_location_reveal.jsx",
+      "prompt": "Create a 7-second earth zoom location reveal with vector globe, land strips, target rings, location pin, data card, and satellite-style footer.",
+      "tags": ["synthetic-v10", "earth-zoom", "location", "map", "route-reveal", "infographic", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "ADBE Vector Shape - Ellipse", "setValueAtTime"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Earth Zoom Location Reveal",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 7,
+        "frame_rate": 30,
+        "min_layers": 14,
+        "render_frame": 105
+      },
+      "inspiration_sources": ["earth zoom After Effects template categories", "map generator script conventions", "location reveal broadcast graphics"]
+    },
+    {
+      "case_id": "smoke_particle_logo_reveal",
+      "template": "smoke_particle_logo_reveal.jsx",
+      "prompt": "Create a 6-second smoke particle logo reveal with radial particle expansion, fading smoke puffs, rotating logo mark, and final brand lockup.",
+      "tags": ["synthetic-v10", "particle", "smoke", "logo-sting", "branding", "reveal", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Ellipse", "ADBE Vector Shape - Rect", "setValueAtTime"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Smoke Particle Logo Reveal",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 6,
+        "frame_rate": 30,
+        "min_layers": 48,
+        "render_frame": 90
+      },
+      "inspiration_sources": ["smoke particle logo reveal template category", "particle logo sting conventions", "radial reveal motion graphics"]
+    },
+    {
+      "case_id": "neon_sign_kit_intro",
+      "template": "neon_sign_kit_intro.jsx",
+      "prompt": "Create a 6-second neon sign kit intro with brick wall guide lines, flickering neon words, modular tube lights, electric sweep, and kit footer.",
+      "tags": ["synthetic-v10", "neon", "intro", "retro", "title-sequence", "lights", "expressions"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "layers.addText", ".expression"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Neon Sign Kit Intro",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 6,
+        "frame_rate": 30,
+        "min_layers": 22,
+        "render_frame": 90
+      },
+      "inspiration_sources": ["Motionstyles neon sign kit category", "retro/vintage title kit conventions", "light flicker intro systems"]
+    },
+    {
+      "case_id": "action_teaser_title_stack",
+      "template": "action_teaser_title_stack.jsx",
+      "prompt": "Create a 7-second action trailer teaser title stack with slab title reveals, fast streaks, impact flash frame, and cinematic footer text.",
+      "tags": ["synthetic-v10", "trailer", "teaser", "action", "cinematic", "title-sequence", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "layers.addText", "setValueAtTime"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Action Teaser Title Stack",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 7,
+        "frame_rate": 30,
+        "min_layers": 24,
+        "render_frame": 105
+      },
+      "inspiration_sources": ["Envato action/cinematic teaser opener categories", "Motion Array intro/title categories", "trailer title slab conventions"]
+    }
+  ]
+}

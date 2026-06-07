@@ -1,0 +1,174 @@
+{
+  "cases": [
+    {
+      "case_id": "cinematic_trailer_pulse",
+      "template": "cinematic_trailer_pulse.jsx",
+      "prompt": "Create an 8-second cinematic After Effects trailer opener with letterbox bars, sequential title cards, light sweeps, and an impact flash.",
+      "tags": [
+        "synthetic-v2",
+        "trailer",
+        "opener",
+        "cinematic",
+        "typography",
+        "keyframes"
+      ],
+      "must_contain": [
+        "app.project.items.addComp",
+        "layers.addText",
+        "setValueAtTime",
+        "ADBE Vector Shape - Rect"
+      ],
+      "must_not_contain": [
+        "app.quit(",
+        "system.callSystem",
+        "fetch(",
+        "XMLHttpRequest"
+      ],
+      "expected": {
+        "comp_name": "AEFT Cinematic Trailer Pulse",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 8,
+        "frame_rate": 30,
+        "min_layers": 12,
+        "render_frame": 120
+      }
+    },
+    {
+      "case_id": "glitch_logo_sting",
+      "template": "glitch_logo_sting.jsx",
+      "prompt": "Create a 5-second glitch logo sting with chromatic logo offsets, signal scanlines, animated glitch bars, and a compact brand lockup.",
+      "tags": [
+        "synthetic-v2",
+        "logo-sting",
+        "glitch",
+        "branding",
+        "expressions",
+        "shape-layers"
+      ],
+      "must_contain": [
+        "app.project.items.addComp",
+        "ADBE Vector Shape - Rect",
+        "setValueAtTime",
+        ".expression"
+      ],
+      "must_not_contain": [
+        "app.quit(",
+        "system.callSystem",
+        "fetch(",
+        "XMLHttpRequest"
+      ],
+      "expected": {
+        "comp_name": "AEFT Glitch Logo Sting",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 5,
+        "frame_rate": 30,
+        "min_layers": 15,
+        "render_frame": 70
+      }
+    },
+    {
+      "case_id": "vertical_app_promo_reel",
+      "template": "vertical_app_promo_reel.jsx",
+      "prompt": "Create a 7-second vertical 1080x1920 social app promo with a phone mockup, animated feature cards, sticker badge, and bottom CTA.",
+      "tags": [
+        "synthetic-v2",
+        "vertical",
+        "social",
+        "app-promo",
+        "mockup",
+        "keyframes"
+      ],
+      "must_contain": [
+        "app.project.items.addComp",
+        "effect.addProperty",
+        "layers.addText",
+        "setValueAtTime"
+      ],
+      "must_not_contain": [
+        "app.quit(",
+        "system.callSystem",
+        "fetch(",
+        "XMLHttpRequest"
+      ],
+      "expected": {
+        "comp_name": "AEFT Vertical App Promo Reel",
+        "width": 1080,
+        "height": 1920,
+        "duration_seconds": 7,
+        "frame_rate": 30,
+        "min_layers": 10,
+        "render_frame": 90
+      }
+    },
+    {
+      "case_id": "event_promo_countdown",
+      "template": "event_promo_countdown.jsx",
+      "prompt": "Create an 8-second event promo animation with diagonal energy stripes, a bold date block, workshop title, speaker cards, and a countdown callout.",
+      "tags": [
+        "synthetic-v2",
+        "event-promo",
+        "countdown",
+        "broadcast",
+        "typography",
+        "expressions"
+      ],
+      "must_contain": [
+        "app.project.items.addComp",
+        "layers.addText",
+        "ADBE Vector Shape - Rect",
+        ".expression"
+      ],
+      "must_not_contain": [
+        "app.quit(",
+        "system.callSystem",
+        "fetch(",
+        "XMLHttpRequest"
+      ],
+      "expected": {
+        "comp_name": "AEFT Event Promo Countdown",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 8,
+        "frame_rate": 30,
+        "min_layers": 14,
+        "render_frame": 120
+      }
+    },
+    {
+      "case_id": "map_route_reveal",
+      "template": "map_route_reveal.jsx",
+      "prompt": "Create a 7-second travel route reveal with a stylized map grid, animated route line, city pins, moving plane marker, and title.",
+      "tags": [
+        "synthetic-v2",
+        "travel",
+        "map",
+        "route-reveal",
+        "infographic",
+        "keyframes"
+      ],
+      "must_contain": [
+        "app.project.items.addComp",
+        "ADBE Vector Shape - Ellipse",
+        "setValueAtTime",
+        "layers.addText"
+      ],
+      "must_not_contain": [
+        "app.quit(",
+        "system.callSystem",
+        "fetch(",
+        "XMLHttpRequest"
+      ],
+      "expected": {
+        "comp_name": "AEFT Map Route Reveal",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 7,
+        "frame_rate": 30,
+        "min_layers": 20,
+        "render_frame": 105
+      }
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "cases": [
+    {
+      "case_id": "typewriter_highlight_console",
+      "template": "typewriter_highlight_console.jsx",
+      "prompt": "Create a 7-second typewriter highlight console with monospaced text lines, animated blinking cursor, underline/highlight boxes, typed checkpoints, and a late status panel.",
+      "tags": ["synthetic-v14", "typewriter", "text-highlight", "cursor", "monospaced", "typography", "workflow-ui", "expressions"],
+      "must_contain": ["app.project.items.addComp", "layers.addText", "ADBE Vector Shape - Rect", ".expression"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Typewriter Highlight Console",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 7,
+        "frame_rate": 30,
+        "min_layers": 24,
+        "render_frame": 105
+      },
+      "inspiration_sources": ["aescripts Type text utility category", "Adobe typewriter effect tutorial category", "AE Screens text highlight and typewriter tool categories"]
+    },
+    {
+      "case_id": "spiral_grid_logo_system",
+      "template": "spiral_grid_logo_system.jsx",
+      "prompt": "Create a 7-second spiral grid logo system with circular/spiral placeholder tile distribution, 3D camera drift, selected logo tile, guide rings, and layout mode labels.",
+      "tags": ["synthetic-v14", "spiral-grid", "circular-grid", "grid", "3d", "layout-builder", "logo-sting", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "layers.addCamera", "threeDLayer = true", "setValueAtTime"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Spiral Grid Logo System",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 7,
+        "frame_rate": 30,
+        "min_layers": 32,
+        "render_frame": 105
+      },
+      "inspiration_sources": ["Gridder 2 circular and spiral grid layout categories", "aescripts Grid Builder category", "owned 3D logo layout conventions"]
+    },
+    {
+      "case_id": "speed_ramp_timewarp_promo",
+      "template": "speed_ramp_timewarp_promo.jsx",
+      "prompt": "Create a 6-second speed-ramp timewarp promo with nested action clip remapping, beat markers, acceleration streaks, freeze-frame labels, velocity graph strips, and impact typography.",
+      "tags": ["synthetic-v14", "speed-ramp", "time-remap", "audio-sync", "sports", "promo", "motion-trails", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "timeRemapEnabled", "ADBE Time Remapping", "setValueAtTime"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Speed Ramp Timewarp Promo",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 6,
+        "frame_rate": 30,
+        "min_layers": 24,
+        "render_frame": 90
+      },
+      "inspiration_sources": ["AE Screens Speed time-remap tool category", "sports promo speed-ramp template conventions", "owned audio-sync motion graphics conventions"]
+    },
+    {
+      "case_id": "parallax_cursor_screen_demo",
+      "template": "parallax_cursor_screen_demo.jsx",
+      "prompt": "Create an 8-second parallax cursor screen demo with layered app windows in 3D, animated mouse cursor clicks, depth camera drift, responsive highlight rectangles, and screen-recording callouts.",
+      "tags": ["synthetic-v14", "parallax-ui", "mouse-cursor", "screen-recording", "app-promo", "mockup", "3d", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "layers.addCamera", "threeDLayer = true", "setValueAtTime"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Parallax Cursor Screen Demo",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 8,
+        "frame_rate": 30,
+        "min_layers": 28,
+        "render_frame": 120
+      },
+      "inspiration_sources": ["AE Screens Pearelax parallax category", "AE Screens Mouse Pack cursor category", "UI screen recording promo template conventions"]
+    }
+  ]
+}

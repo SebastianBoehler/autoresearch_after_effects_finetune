@@ -1,174 +1,19 @@
 {
-  "cases": [
-    {
-      "case_id": "kinetic_type_reveal",
-      "template": "kinetic_type_reveal.jsx",
-      "prompt": "Create a 6-second 1920x1080 After Effects intro with a dark background, kinetic headline text, a subtitle, and three animated accent bars.",
-      "tags": ["synthetic-v1", "typography", "intro", "shape-layers", "keyframes"],
-      "must_contain": ["app.project.items.addComp", "layers.addText", "setValueAtTime", "ADBE Vector Shape - Rect"],
-      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
-      "expected": {
-        "comp_name": "AEFT Kinetic Type Reveal",
-        "width": 1920,
-        "height": 1080,
-        "duration_seconds": 6,
-        "frame_rate": 30,
-        "min_layers": 5,
-        "render_frame": 45
-      }
-    },
-    {
-      "case_id": "metric_dashboard_pulse",
-      "template": "metric_dashboard_pulse.jsx",
-      "prompt": "Create a clean 8-second After Effects dashboard animation with four KPI cards, animated progress bars, and a pulsing status dot.",
-      "tags": ["synthetic-v1", "dashboard", "data-visualization", "shape-layers", "expressions"],
-      "must_contain": ["app.project.items.addComp", "ADBE Vector Graphic - Fill", "setValueAtTime", ".expression"],
-      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
-      "expected": {
-        "comp_name": "AEFT Metric Dashboard Pulse",
-        "width": 1920,
-        "height": 1080,
-        "duration_seconds": 8,
-        "frame_rate": 30,
-        "min_layers": 10,
-        "render_frame": 90
-      }
-    },
-    {
-      "case_id": "orbiting_concept_map",
-      "template": "orbiting_concept_map.jsx",
-      "prompt": "Create a 7-second educational concept-map animation with a central topic, orbiting nodes, connector lines, and subtle looping motion expressions.",
-      "tags": ["synthetic-v1", "education", "concept-map", "expressions", "shape-layers"],
-      "must_contain": ["layers.addShape", "layers.addText", ".expression", "ADBE Vector Shape - Ellipse"],
-      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
-      "expected": {
-        "comp_name": "AEFT Orbiting Concept Map",
-        "width": 1920,
-        "height": 1080,
-        "duration_seconds": 7,
-        "frame_rate": 30,
-        "min_layers": 9,
-        "render_frame": 75
-      }
-    },
-    {
-      "case_id": "product_reveal_split",
-      "template": "product_reveal_split.jsx",
-      "prompt": "Create a 5-second product reveal with a split background, sliding panels, a product placeholder, title text, and a call-to-action chip.",
-      "tags": ["synthetic-v1", "product", "reveal", "motion-graphics", "keyframes"],
-      "must_contain": ["app.project.items.addComp", "setValueAtTime", "ADBE Vector Shape - Rect", "layers.addText"],
-      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
-      "expected": {
-        "comp_name": "AEFT Product Reveal Split",
-        "width": 1920,
-        "height": 1080,
-        "duration_seconds": 5,
-        "frame_rate": 30,
-        "min_layers": 7,
-        "render_frame": 55
-      }
-    },
-    {
-      "case_id": "timeline_milestone_rise",
-      "template": "timeline_milestone_rise.jsx",
-      "prompt": "Create a 9-second timeline explainer with four milestones that rise in sequence, labels, dates, and a progress line that draws across the screen.",
-      "tags": ["synthetic-v1", "timeline", "explainer", "shape-layers", "keyframes"],
-      "must_contain": ["app.project.items.addComp", "setValueAtTime", "ADBE Vector Shape - Rect", "layers.addText"],
-      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
-      "expected": {
-        "comp_name": "AEFT Timeline Milestone Rise",
-        "width": 1920,
-        "height": 1080,
-        "duration_seconds": 9,
-        "frame_rate": 30,
-        "min_layers": 12,
-        "render_frame": 120
-      }
-    },
-    {
-      "case_id": "lower_third_news_ribbon",
-      "template": "lower_third_news_ribbon.jsx",
-      "prompt": "Create a 6-second broadcast-style lower third with a sliding nameplate, section tag, headline, and animated underline.",
-      "tags": ["synthetic-v1", "lower-third", "broadcast", "typography", "keyframes"],
-      "must_contain": ["app.project.items.addComp", "layers.addText", "setValueAtTime", "ADBE Vector Shape - Rect"],
-      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
-      "expected": {
-        "comp_name": "AEFT Lower Third News Ribbon",
-        "width": 1920,
-        "height": 1080,
-        "duration_seconds": 6,
-        "frame_rate": 30,
-        "min_layers": 6,
-        "render_frame": 60
-      }
-    },
-    {
-      "case_id": "radial_countdown_timer",
-      "template": "radial_countdown_timer.jsx",
-      "prompt": "Create a 5-second radial countdown timer with a circular progress ring, centered number, and subtle pulse expression.",
-      "tags": ["synthetic-v1", "timer", "radial", "expressions", "shape-layers"],
-      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Ellipse", "ADBE Vector Filter - Trim", ".expression"],
-      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
-      "expected": {
-        "comp_name": "AEFT Radial Countdown Timer",
-        "width": 1080,
-        "height": 1080,
-        "duration_seconds": 5,
-        "frame_rate": 30,
-        "min_layers": 4,
-        "render_frame": 75
-      }
-    },
-    {
-      "case_id": "parallax_card_stack",
-      "template": "parallax_card_stack.jsx",
-      "prompt": "Create a 7-second parallax card-stack animation with three overlapping content cards, staggered slide-in motion, and soft drop shadows.",
-      "tags": ["synthetic-v1", "cards", "parallax", "ui-motion", "keyframes"],
-      "must_contain": ["app.project.items.addComp", "effect.addProperty", "setValueAtTime", "layers.addText"],
-      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
-      "expected": {
-        "comp_name": "AEFT Parallax Card Stack",
-        "width": 1920,
-        "height": 1080,
-        "duration_seconds": 7,
-        "frame_rate": 30,
-        "min_layers": 9,
-        "render_frame": 80
-      }
-    },
-    {
-      "case_id": "code_step_explainer",
-      "template": "code_step_explainer.jsx",
-      "prompt": "Create an 8-second code-step explainer with three code rows, a moving highlight bar, and a blinking cursor.",
-      "tags": ["synthetic-v1", "code", "explainer", "typography", "expressions"],
-      "must_contain": ["app.project.items.addComp", "layers.addText", "setValueAtTime", ".expression"],
-      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
-      "expected": {
-        "comp_name": "AEFT Code Step Explainer",
-        "width": 1920,
-        "height": 1080,
-        "duration_seconds": 8,
-        "frame_rate": 30,
-        "min_layers": 8,
-        "render_frame": 100
-      }
-    },
-    {
-      "case_id": "comparison_bar_race",
-      "template": "comparison_bar_race.jsx",
-      "prompt": "Create a 7-second comparison bar-race chart with four categories, animated horizontal bars, numeric labels, and a clean title.",
-      "tags": ["synthetic-v1", "chart", "bar-race", "data-visualization", "keyframes"],
-      "must_contain": ["app.project.items.addComp", "setValueAtTime", "ADBE Vector Shape - Rect", "layers.addText"],
-      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
-      "expected": {
-        "comp_name": "AEFT Comparison Bar Race",
-        "width": 1920,
-        "height": 1080,
-        "duration_seconds": 7,
-        "frame_rate": 30,
-        "min_layers": 12,
-        "render_frame": 95
-      }
-    }
+  "includes": [
+    "manifests/synthetic_v1a.json",
+    "manifests/synthetic_v1b.json",
+    "manifests/synthetic_v2.json",
+    "manifests/synthetic_v3.json",
+    "manifests/synthetic_v4.json",
+    "manifests/synthetic_v5.json",
+    "manifests/synthetic_v6.json",
+    "manifests/synthetic_v7.json",
+    "manifests/synthetic_v8.json",
+    "manifests/synthetic_v9.json",
+    "manifests/synthetic_v10.json",
+    "manifests/synthetic_v11.json",
+    "manifests/synthetic_v12.json",
+    "manifests/synthetic_v13.json",
+    "manifests/synthetic_v14.json"
   ]
 }

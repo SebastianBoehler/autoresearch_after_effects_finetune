@@ -1,0 +1,76 @@
+{
+  "cases": [
+    {
+      "case_id": "weather_forecast_broadcast",
+      "template": "weather_forecast_broadcast.jsx",
+      "prompt": "Create a 7-second weather forecast broadcast graphic with a global map panel, animated weekly forecast cards, temperature bars, lower ticker, and moving weather icons.",
+      "tags": ["synthetic-v8", "weather", "forecast", "broadcast", "temperature", "news", "infographic", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "ADBE Vector Shape - Ellipse", "setValueAtTime"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Weather Forecast Broadcast",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 7,
+        "frame_rate": 30,
+        "min_layers": 24,
+        "render_frame": 105
+      },
+      "inspiration_sources": ["Envato weather broadcast packages", "Motion Array news graphics pack categories", "weekly weather forecast template conventions"]
+    },
+    {
+      "case_id": "finance_market_reel",
+      "template": "finance_market_reel.jsx",
+      "prompt": "Create a 7-second vertical stock market social reel with candlestick chart animation, volume bars, portfolio growth card, ticker strip, and animated coin markers.",
+      "tags": ["synthetic-v8", "finance", "stock-market", "trading", "investing", "vertical", "social", "data-visualization", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "ADBE Vector Shape - Ellipse", "layers.addText"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Finance Market Reel",
+        "width": 1080,
+        "height": 1920,
+        "duration_seconds": 7,
+        "frame_rate": 30,
+        "min_layers": 28,
+        "render_frame": 100
+      },
+      "inspiration_sources": ["Motion Array crypto stock trading intro categories", "Envato stock market reels", "finance broadcast chart package conventions"]
+    },
+    {
+      "case_id": "medical_device_explainer",
+      "template": "medical_device_explainer.jsx",
+      "prompt": "Create an 8-second healthcare device explainer with patient monitor cards, animated heartbeat line, device callouts, dosage steps, and clinical status indicators.",
+      "tags": ["synthetic-v8", "healthcare", "medical", "device", "patient", "explainer", "infographic", "education", "expressions"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "ADBE Vector Shape - Ellipse", ".expression"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Medical Device Explainer",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 8,
+        "frame_rate": 30,
+        "min_layers": 24,
+        "render_frame": 120
+      },
+      "inspiration_sources": ["healthcare explainer motion graphics categories", "medical device explainer conventions", "clinical monitor UI animation patterns"]
+    },
+    {
+      "case_id": "fashion_lookbook_opener",
+      "template": "fashion_lookbook_opener.jsx",
+      "prompt": "Create a 6-second vertical fashion lookbook opener with sliding editorial panels, runway labels, kinetic typography, color swatches, and a fast magazine-style wipe.",
+      "tags": ["synthetic-v8", "fashion", "lookbook", "streetwear", "runway", "vertical", "social", "opener", "typography"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "layers.addText", "setValueAtTime"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Fashion Lookbook Opener",
+        "width": 1080,
+        "height": 1920,
+        "duration_seconds": 6,
+        "frame_rate": 30,
+        "min_layers": 24,
+        "render_frame": 90
+      },
+      "inspiration_sources": ["MotionElements fashion style promo categories", "Motion Array fashion promo opener categories", "urban social media opener conventions"]
+    }
+  ]
+}

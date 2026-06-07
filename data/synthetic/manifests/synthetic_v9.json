@@ -1,0 +1,112 @@
+{
+  "cases": [
+    {
+      "case_id": "cylindrical_video_wall_intro",
+      "template": "cylindrical_video_wall_intro.jsx",
+      "prompt": "Create a 7-second broadcast-style cylindrical media wall intro with curved placeholder panels, ticker blocks, scan sweep, and staggered panel reveal animation.",
+      "tags": ["synthetic-v9", "broadcast", "slideshow", "media-wall", "placeholder", "intro", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "layers.addText", "setValueAtTime"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Cylindrical Video Wall Intro",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 7,
+        "frame_rate": 30,
+        "min_layers": 28,
+        "render_frame": 105
+      },
+      "inspiration_sources": ["Envato/Tuts+ cylindrical video wall script category", "aescripts media placeholder and workflow categories", "broadcast media-wall template conventions"]
+    },
+    {
+      "case_id": "handwriting_watercolor_title",
+      "template": "handwriting_watercolor_title.jsx",
+      "prompt": "Create a 6-second handwriting watercolor title card with animated brush strokes, blooming paint blobs, final script lettering, and a paper-texture inspired layout.",
+      "tags": ["synthetic-v9", "typography", "title-sequence", "handwriting", "watercolor", "opener", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "ADBE Vector Shape - Ellipse", "layers.addText"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Handwriting Watercolor Title",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 6,
+        "frame_rate": 30,
+        "min_layers": 24,
+        "render_frame": 90
+      },
+      "inspiration_sources": ["Envato/Tuts+ handwriting watercolor package category", "animated typeface script conventions", "paint title-card template conventions"]
+    },
+    {
+      "case_id": "crt_datamosh_transition",
+      "template": "crt_datamosh_transition.jsx",
+      "prompt": "Create a 6-second CRT datamosh transition with RGB title offsets, animated scanlines, glitch blocks, analog wipe, and flickering screen plate.",
+      "tags": ["synthetic-v9", "transition", "glitch", "crt", "datamosh", "rgb-shift", "expressions"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "layers.addText", ".expression"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT CRT Datamosh Transition",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 6,
+        "frame_rate": 30,
+        "min_layers": 42,
+        "render_frame": 95
+      },
+      "inspiration_sources": ["aescripts CRTX and Motion Mosh effect categories", "Envato/Tuts+ old RGB CRT screen category", "analog glitch transition conventions"]
+    },
+    {
+      "case_id": "multicolor_tapered_path_reveal",
+      "template": "multicolor_tapered_path_reveal.jsx",
+      "prompt": "Create a 7-second multicolor tapered path reveal with snake-like segmented strokes, staggered caps, guide markers, and tool-label typography.",
+      "tags": ["synthetic-v9", "shape-layers", "path", "taper", "stroke", "motion-graphics", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "ADBE Vector Shape - Ellipse", "setValueAtTime"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Multicolor Tapered Path Reveal",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 7,
+        "frame_rate": 30,
+        "min_layers": 24,
+        "render_frame": 105
+      },
+      "inspiration_sources": ["Eje in Motion Snake Paths category", "Eje in Motion Easy Taper category", "shape path helper and stroke design conventions"]
+    },
+    {
+      "case_id": "command_palette_toolkit_hud",
+      "template": "command_palette_toolkit_hud.jsx",
+      "prompt": "Create a 6-second After Effects workflow-tool HUD with command palette rows, selected command highlight, icon browser tiles, progress bar, and tool status text.",
+      "tags": ["synthetic-v9", "hud", "interface", "workflow-ui", "command-palette", "icons", "automation", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "layers.addText", "setValueAtTime"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Command Palette Toolkit HUD",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 6,
+        "frame_rate": 30,
+        "min_layers": 24,
+        "render_frame": 90
+      },
+      "inspiration_sources": ["aescripts Command Frame category", "aescripts IconDock category", "Motion Tools Pro workflow panel category"]
+    },
+    {
+      "case_id": "liquid_glass_product_card",
+      "template": "liquid_glass_product_card.jsx",
+      "prompt": "Create a 7-second vertical liquid-glass product card with refractive color blobs, glass edges, specular sweep, product placeholder, swatches, and preorder CTA.",
+      "tags": ["synthetic-v9", "liquid-glass", "product", "social", "vertical", "chromatic", "promo", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "ADBE Vector Shape - Ellipse", "layers.addText"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Liquid Glass Product Card",
+        "width": 1080,
+        "height": 1920,
+        "duration_seconds": 7,
+        "frame_rate": 30,
+        "min_layers": 20,
+        "render_frame": 105
+      },
+      "inspiration_sources": ["aescripts MB Liquid Glass effect category", "aescripts Quick Chromatic Aberration category", "vertical product promo template conventions"]
+    }
+  ]
+}

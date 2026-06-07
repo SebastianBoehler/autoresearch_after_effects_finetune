@@ -86,6 +86,100 @@ temporary harness under `artifacts/ae_live_checks/`, executes it through
 AppleScript, inspects the created composition, and saves a `.aep` project for
 manual review.
 
+Render MP4s and inspect every third frame for motion, foreground density,
+blank frames, contrast, color variety, and overlap-style warnings:
+
+```bash
+uv run python -m after_effects_pipeline.cli verify-source \
+  --config configs/lfm25_8b_a1b_after_effects.json \
+  --live --render
+
+uv run python -m after_effects_pipeline.cli analyze-renders \
+  --config configs/lfm25_8b_a1b_after_effects.json
+
+uv run python -m after_effects_pipeline.cli audit-dataset \
+  --config configs/lfm25_8b_a1b_after_effects.json
+
+uv run python -m after_effects_pipeline.cli contact-sheets \
+  --config configs/lfm25_8b_a1b_after_effects.json
+
+uv run python -m after_effects_pipeline.cli render-review-queue \
+  --config configs/lfm25_8b_a1b_after_effects.json
+```
+
+If AppleScript accepts `DoScriptFile` but AE does not execute the JSX body,
+generate manual harness chunks and run them from After Effects:
+
+```bash
+uv run python scripts/build_ae_manual_harnesses.py
+```
+
+Run the generated `run_all_harnesses.jsx` from AE via
+`File > Scripts > Run Script File...`.
+It writes `runner_report.txt` beside the harness chunks and per-case
+`report.txt` files under `artifacts/ae_live_checks/<case>/`.
+Check the AE runner output before rendering:
+
+```bash
+uv run python scripts/check_ae_manual_harnesses.py
+```
+
+Then render the current project files, refresh every-third-frame analysis,
+rebuild the review queue, export train-ready rows, rebuild MLX splits, and run
+the training preflight:
+
+```bash
+uv run python scripts/refresh_after_manual_harnesses.py
+```
+
+For visual triage, inspect `artifacts/visual_analysis/review-dashboard.md`.
+It groups every-third-frame analysis by decision, pack coverage, warning,
+motion profile, and contact sheet.
+
+For quality-focused training before the full render debt is cleared, use the
+strict export under `artifacts/datasets/after-effects-high-quality/` and the
+matching config:
+
+```bash
+uv run python -m after_effects_pipeline.cli train \
+  --config configs/lfm25_8b_a1b_after_effects_high_quality.json
+```
+
+The refresh writes `quality-gate.json` and `quality-gate.md` under
+`artifacts/datasets/after-effects-train-ready/`. Treat
+`technical_trainable_subset=true` as a subset sanity check, not full completion;
+`high_quality_trainable_subset=true` is the stricter signal for quality-focused
+training, and `full_dataset_ready=true` is the gate for the complete diverse
+rendered set.
+
+Generate priority-ordered AE harnesses for the highest-value render debt:
+
+```bash
+uv run python scripts/build_ae_manual_harnesses.py
+uv run python scripts/build_ae_manual_harnesses.py \
+  --limit 8 \
+  --output-dir artifacts/ae_live_checks/_manual_harnesses_priority
+```
+
+The refresh script already rebuilds MLX splits and runs the training preflight.
+Before starting a LoRA run from the current promoted subset, re-run source
+verification if desired, then start training:
+
+```bash
+uv run python -m after_effects_pipeline.cli verify-source \
+  --config configs/lfm25_8b_a1b_after_effects_train_ready.json
+
+uv run python -m after_effects_pipeline.cli train \
+  --config configs/lfm25_8b_a1b_after_effects_train_ready.json
+```
+
+Live checks require this AE preference:
+
+```text
+After Effects > Preferences > Scripting & Expressions >
+Allow Scripts to Write Files and Access Network
+```
+
 ## Dataset Contract
 
 Rows live in `data/after_effects_synthetic_cases.jsonl` and use this shape:

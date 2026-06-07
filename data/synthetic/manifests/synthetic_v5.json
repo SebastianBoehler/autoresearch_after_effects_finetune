@@ -1,0 +1,40 @@
+{
+  "cases": [
+    {
+      "case_id": "food_recipe_reel",
+      "template": "food_recipe_reel.jsx",
+      "prompt": "Create a 7-second vertical food recipe reel with a pasta plate, animated noodles, step cards, title text, subtitle, and save-recipe CTA.",
+      "tags": ["synthetic-v5", "vertical", "social", "food", "recipe", "promo"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Ellipse", "layers.addText", ".expression"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Food Recipe Reel",
+        "width": 1080,
+        "height": 1920,
+        "duration_seconds": 7,
+        "frame_rate": 30,
+        "min_layers": 18,
+        "render_frame": 100
+      },
+      "inspiration_sources": ["Envato food and social video template themes", "Motion Array social media template categories", "vertical recipe reel conventions"]
+    },
+    {
+      "case_id": "podcast_quote_audiogram",
+      "template": "podcast_quote_audiogram.jsx",
+      "prompt": "Create a 6-second square podcast audiogram with show title, animated speaker avatar, quote text, waveform bars, progress line, and timecode.",
+      "tags": ["synthetic-v5", "square", "podcast", "audiogram", "social", "expressions"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "ADBE Vector Shape - Ellipse", ".expression"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Podcast Quote Audiogram",
+        "width": 1080,
+        "height": 1080,
+        "duration_seconds": 6,
+        "frame_rate": 30,
+        "min_layers": 20,
+        "render_frame": 90
+      },
+      "inspiration_sources": ["Motion Array social and typography categories", "Envato audio and social template themes", "square podcast audiogram conventions"]
+    }
+  ]
+}

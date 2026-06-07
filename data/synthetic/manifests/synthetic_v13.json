@@ -1,0 +1,76 @@
+{
+  "cases": [
+    {
+      "case_id": "ascii_signal_glitch_title",
+      "template": "ascii_signal_glitch_title.jsx",
+      "prompt": "Create a 6-second ASCII terminal decoder sequence with scrolling log rows, checksum blocks, operator status cards, blinking cursor, signal trace path, and late verification badge.",
+      "tags": ["synthetic-v13", "glitch", "ascii", "terminal", "decoder", "data-stream", "status-panel", "typography", "expressions"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "layers.addText", ".expression"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT ASCII Signal Glitch Title",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 6,
+        "frame_rate": 30,
+        "min_layers": 34,
+        "render_frame": 90
+      },
+      "inspiration_sources": ["aescripts ASCII terminal/data generator categories", "Envato/Tuts+ broadcast and CRT workflow template categories", "owned terminal decoder status-panel conventions"]
+    },
+    {
+      "case_id": "grid_builder_product_wall",
+      "template": "grid_builder_product_wall.jsx",
+      "prompt": "Create a 7-second grid-builder product wall with a null-controlled modular tile grid, animated placeholder cards, row/column guides, selected cell highlight, and layout status labels.",
+      "tags": ["synthetic-v13", "grid", "workflow-ui", "placeholder", "product", "slideshow", "layout-builder", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "layers.addNull", "ADBE Vector Shape - Rect", "setValueAtTime"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Grid Builder Product Wall",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 7,
+        "frame_rate": 30,
+        "min_layers": 30,
+        "render_frame": 105
+      },
+      "inspiration_sources": ["aescripts Grid Builder layout category", "Envato media-wall placeholder template categories", "owned product-grid slideshow conventions"]
+    },
+    {
+      "case_id": "sound_marker_sync_sting",
+      "template": "sound_marker_sync_sting.jsx",
+      "prompt": "Create a 6-second sound-marker sync logo sting with beat marker ticks, waveform trigger bars, whoosh labels, impact flashes, synced scale pops, and timeline cue cards.",
+      "tags": ["synthetic-v13", "audio", "sound-sync", "markers", "waveform", "logo-sting", "motion-trails", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "MarkerValue", "ADBE Vector Shape - Rect", "setValueAtTime"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Sound Marker Sync Sting",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 6,
+        "frame_rate": 30,
+        "min_layers": 28,
+        "render_frame": 90
+      },
+      "inspiration_sources": ["Eje in Motion SoundBox sound-placement category", "After Effects marker-sync workflow conventions", "owned audio-reactive logo sting conventions"]
+    },
+    {
+      "case_id": "geo_terrain_route_flyover",
+      "template": "geo_terrain_route_flyover.jsx",
+      "prompt": "Create an 8-second geo terrain route flyover with layered contour map strips, 3D camera push, route trace, location pins, altitude labels, and satellite data cards.",
+      "tags": ["synthetic-v13", "geo-map", "map", "route-reveal", "3d", "terrain", "infographic", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "layers.addCamera", "threeDLayer = true", "setValueAtTime"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Geo Terrain Route Flyover",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 8,
+        "frame_rate": 30,
+        "min_layers": 24,
+        "render_frame": 120
+      },
+      "inspiration_sources": ["aescripts GEOlayers map-animation category", "3D landscape flyover template conventions", "owned route-reveal data overlay conventions"]
+    }
+  ]
+}

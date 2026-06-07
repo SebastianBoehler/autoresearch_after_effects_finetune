@@ -1,0 +1,58 @@
+{
+  "cases": [
+    {
+      "case_id": "liquid_logo_bloom",
+      "template": "liquid_logo_bloom.jsx",
+      "prompt": "Create a 6-second liquid logo reveal with colorful blobs that bloom outward, a central logo mark, brand name, and tagline.",
+      "tags": ["synthetic-v6", "logo-sting", "branding", "logo-reveal", "opener", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Ellipse", "setValueAtTime", "layers.addText"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Liquid Logo Bloom",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 6,
+        "frame_rate": 30,
+        "min_layers": 12,
+        "render_frame": 90
+      },
+      "inspiration_sources": ["Motion Array logo reveal template categories", "Envato logo animation categories", "liquid logo reveal conventions"]
+    },
+    {
+      "case_id": "lyric_waveform_poster",
+      "template": "lyric_waveform_poster.jsx",
+      "prompt": "Create a 7-second square lyric waveform poster with bold lyric text, animated dual waveform rows, a moving lyric cursor, and track label.",
+      "tags": ["synthetic-v6", "music", "visualizer", "lyrics", "square", "expressions"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "layers.addText", ".expression"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Lyric Waveform Poster",
+        "width": 1080,
+        "height": 1080,
+        "duration_seconds": 7,
+        "frame_rate": 30,
+        "min_layers": 20,
+        "render_frame": 100
+      },
+      "inspiration_sources": ["Motion Array social audio templates", "Envato music visualizer themes", "square lyric poster conventions"]
+    },
+    {
+      "case_id": "security_terminal_hud",
+      "template": "security_terminal_hud.jsx",
+      "prompt": "Create an 8-second security terminal HUD with status rows, animated metric fills, route traces, a sweeping scanline, header, and footer.",
+      "tags": ["synthetic-v6", "hud", "interface", "terminal", "sci-fi", "data-visualization"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "setValueAtTime", ".expression"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Security Terminal HUD",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 8,
+        "frame_rate": 30,
+        "min_layers": 18,
+        "render_frame": 110
+      },
+      "inspiration_sources": ["Pixflow infographic and HUD categories", "Motion Array HUD/interface styles", "security terminal UI animation conventions"]
+    }
+  ]
+}

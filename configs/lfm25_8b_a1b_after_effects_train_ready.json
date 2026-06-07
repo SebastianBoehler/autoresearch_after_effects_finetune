@@ -1,0 +1,66 @@
+{
+  "name": "lfm25-8b-a1b-after-effects-train-ready",
+  "base_model": "LiquidAI/LFM2.5-8B-A1B-MLX-8bit",
+  "source_dataset": "artifacts/datasets/after-effects-train-ready/cases.jsonl",
+  "dataset_dir": "artifacts/datasets/lfm25-8b-a1b-after-effects-train-ready",
+  "adapter_path": "artifacts/adapters/lfm25-8b-a1b-after-effects-train-ready",
+  "eval_output_path": "artifacts/evals/lfm25-8b-a1b-after-effects-train-ready-source.json",
+  "results_tsv": "results.tsv",
+  "run_loss_eval": true,
+  "dataset_filter": {
+    "include_tags": [],
+    "exclude_tags": [],
+    "min_quality_score": 0.0
+  },
+  "splits": {
+    "train_fraction": 0.7,
+    "valid_fraction": 0.15,
+    "seed": 42
+  },
+  "train": {
+    "fine_tune_type": "lora",
+    "optimizer": "adamw",
+    "mask_prompt": true,
+    "num_layers": 12,
+    "batch_size": 1,
+    "iters": 120,
+    "val_batches": 4,
+    "learning_rate": 0.00006,
+    "steps_per_report": 10,
+    "steps_per_eval": 20,
+    "grad_accumulation_steps": 8,
+    "save_every": 20,
+    "test_batches": -1,
+    "max_seq_length": 3072,
+    "grad_checkpoint": true,
+    "seed": 42
+  },
+  "generation": {
+    "max_tokens": 2400,
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "top_k": 80,
+    "seed": 42
+  },
+  "evaluation": {
+    "run_live_ae": false,
+    "run_render": false,
+    "max_cases": 0,
+    "max_seconds": 180,
+    "min_promote_score": 0.82,
+    "metric_weights": {
+      "static_syntax": 0.25,
+      "ae_contract": 0.2,
+      "required_snippets": 0.2,
+      "forbidden_snippets": 0.1,
+      "live_execution": 0.15,
+      "render": 0.1
+    },
+    "runtime": {
+      "app_name": "Adobe After Effects 2026",
+      "aerender_path": "/Applications/Adobe After Effects 2026/aerender",
+      "composition_name_fallback": "Generated Comp",
+      "output_extension": "mp4"
+    }
+  }
+}

@@ -26,8 +26,15 @@
         return layer;
     }
 
-    addRect("Editor Panel", [960, 545], [1120, 620], [0.07, 0.09, 0.12]);
-    var highlight = addRect("Moving Highlight", [960, 390], [1040, 78], [0.12, 0.2, 0.32]);
+    addRect("Editor Panel", [960, 545], [1120, 620], [0.1, 0.12, 0.16]);
+    addRect("Accent Rail Cyan", [412, 545], [36, 620], [0.0, 0.65, 1]);
+    addRect("Accent Rail Amber", [1508, 545], [36, 620], [1, 0.58, 0.08]);
+    var wash = addRect("Compiler Color Sweep", [-160, 545], [320, 760], [0.95, 0.14, 0.22]);
+    wash.property("Transform").property("Rotation").setValue(-12);
+    wash.property("Transform").property("Opacity").setValue(38);
+    wash.property("Transform").property("Position").setValueAtTime(1.0, [-160, 545]);
+    wash.property("Transform").property("Position").setValueAtTime(5.4, [2080, 545]);
+    var highlight = addRect("Moving Highlight", [960, 390], [1040, 84], [0.16, 0.28, 0.58]);
     highlight.property("Transform").property("Position").setValueAtTime(0.6, [960, 390]);
     highlight.property("Transform").property("Position").setValueAtTime(2.4, [960, 500]);
     highlight.property("Transform").property("Position").setValueAtTime(4.2, [960, 610]);
@@ -39,4 +46,3 @@
     addText("Title", "Three steps to a renderable comp", [410, 230], 48, [0.95, 0.98, 1]);
     app.endUndoGroup();
 })();
-

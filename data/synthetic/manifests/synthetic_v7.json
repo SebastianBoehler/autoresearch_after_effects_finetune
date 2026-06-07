@@ -1,0 +1,112 @@
+{
+  "cases": [
+    {
+      "case_id": "caption_kinetic_reel",
+      "template": "caption_kinetic_reel.jsx",
+      "prompt": "Create a 6-second vertical social caption reel with grouped subtitle cards, karaoke highlights, reaction chips, and punchy word-by-word animation.",
+      "tags": ["synthetic-v7", "caption", "subtitles", "social", "vertical", "typography", "reels", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "layers.addText", "ADBE Vector Shape - Rect", "setValueAtTime"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Caption Kinetic Reel",
+        "width": 1080,
+        "height": 1920,
+        "duration_seconds": 6,
+        "frame_rate": 30,
+        "min_layers": 18,
+        "render_frame": 90
+      },
+      "inspiration_sources": ["aescripts AutoCaption pacing and style categories", "Eje in Motion QuickCaption workflow category", "short-form social caption conventions"]
+    },
+    {
+      "case_id": "loop_badge_boomerang",
+      "template": "loop_badge_boomerang.jsx",
+      "prompt": "Create a 6-second square looping badge opener with ping-pong scale motion, orbiting dots, rotating rings, and a clean seamless loop feel.",
+      "tags": ["synthetic-v7", "loop", "boomerang", "logo-sting", "branding", "square", "expressions"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Ellipse", "setValueAtTime", ".expression"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Loop Badge Boomerang",
+        "width": 1080,
+        "height": 1080,
+        "duration_seconds": 6,
+        "frame_rate": 30,
+        "min_layers": 18,
+        "render_frame": 90
+      },
+      "inspiration_sources": ["Spotlight FX Looper workflow category", "Eje in Motion Power Loop category", "seamless badge opener conventions"]
+    },
+    {
+      "case_id": "split_screen_launch_opener",
+      "template": "split_screen_launch_opener.jsx",
+      "prompt": "Create a 7-second split-screen product launch opener with animated media placeholders, title panels, feature chips, and staggered panel wipes.",
+      "tags": ["synthetic-v7", "split-screen", "multiscreen", "product", "promo", "slideshow", "opener", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "layers.addText", "setValueAtTime"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Split Screen Launch Opener",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 7,
+        "frame_rate": 30,
+        "min_layers": 20,
+        "render_frame": 95
+      },
+      "inspiration_sources": ["Motion Array split screen intro template structure", "MotionElements multiframe slideshow template category", "Motion Flow multiscreen product promo categories"]
+    },
+    {
+      "case_id": "speed_lines_action_burst",
+      "template": "speed_lines_action_burst.jsx",
+      "prompt": "Create a 5-second action burst with animated speed lines, motion-trail ghosts, impact typography, and a fast transition energy sweep.",
+      "tags": ["synthetic-v7", "motion-trails", "speed-lines", "transition", "sports", "action", "elements", "expressions"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "layers.addText", ".expression"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Speed Lines Action Burst",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 5,
+        "frame_rate": 30,
+        "min_layers": 24,
+        "render_frame": 72
+      },
+      "inspiration_sources": ["Eje in Motion Motion Lines category", "AE template action trailer categories", "sports promo speed-line conventions"]
+    },
+    {
+      "case_id": "travel_postcard_story",
+      "template": "travel_postcard_story.jsx",
+      "prompt": "Create a 7-second vertical travel postcard story with layered cards, route dots, passport stamps, and parallax photo-placeholder movement.",
+      "tags": ["synthetic-v7", "travel", "postcard", "slideshow", "social", "vertical", "map", "keyframes"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "ADBE Vector Shape - Ellipse", "layers.addText"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Travel Postcard Story",
+        "width": 1080,
+        "height": 1920,
+        "duration_seconds": 7,
+        "frame_rate": 30,
+        "min_layers": 22,
+        "render_frame": 100
+      },
+      "inspiration_sources": ["Aeguys travel and social story template categories", "Motion Flow travel slides category", "vertical postcard slideshow conventions"]
+    },
+    {
+      "case_id": "real_estate_listing_tour",
+      "template": "real_estate_listing_tour.jsx",
+      "prompt": "Create a 7-second square real-estate listing tour with animated property cards, floor-plan blocks, feature counters, price tag, and progress dots.",
+      "tags": ["synthetic-v7", "real-estate", "listing", "product", "promo", "slideshow", "square", "data-visualization"],
+      "must_contain": ["app.project.items.addComp", "ADBE Vector Shape - Rect", "layers.addText", "setValueAtTime"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Real Estate Listing Tour",
+        "width": 1080,
+        "height": 1080,
+        "duration_seconds": 7,
+        "frame_rate": 30,
+        "min_layers": 22,
+        "render_frame": 100
+      },
+      "inspiration_sources": ["Motion Flow product promo and slideshow categories", "split-screen listing promo conventions", "real-estate social ad layout conventions"]
+    }
+  ]
+}

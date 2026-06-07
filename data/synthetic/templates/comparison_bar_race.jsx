@@ -26,6 +26,11 @@
         return layer;
     }
 
+    var sweep = addRect("Ranking Sweep", [-240, 650], [420, 1120], [1, 0.82, 0.22]);
+    sweep.property("Transform").property("Rotation").setValue(-18);
+    sweep.property("Transform").property("Opacity").setValue(24);
+    sweep.property("Transform").property("Position").setValueAtTime(0.25, [-240, 650]);
+    sweep.property("Transform").property("Position").setValueAtTime(6.4, [2220, 200]);
     addText("Title", "Framework-specific generation score", [190, 150], 50, [0.09, 0.1, 0.11]);
     var labels = ["Static", "Contract", "Live AE", "Review"];
     var widths = [860, 740, 620, 520];
@@ -39,6 +44,16 @@
         addText("Value " + labels[i], String(Math.round(widths[i] / 10)) + "%", [1230, y + 12], 30, [0.1, 0.12, 0.14]);
     }
     addRect("Baseline Axis", [760, 905], [940, 5], [0.75, 0.78, 0.8]);
+    var midPulse = addRect("Mid Race Pulse", [760, 905], [180, 12], [0.95, 0.5, 0.18]);
+    midPulse.property("Transform").property("Position").setValueAtTime(2.8, [420, 905]);
+    midPulse.property("Transform").property("Position").setValueAtTime(4.1, [1180, 905]);
+    midPulse.property("Transform").property("Opacity").setValueAtTime(2.8, 0);
+    midPulse.property("Transform").property("Opacity").setValueAtTime(3.2, 82);
+    midPulse.property("Transform").property("Opacity").setValueAtTime(4.1, 0);
+    var topSweep = addRect("Top Ranking Sweep", [-260, 620], [360, 1080], [1, 0.76, 0.18]);
+    topSweep.property("Transform").property("Rotation").setValue(-18);
+    topSweep.property("Transform").property("Opacity").setValue(30);
+    topSweep.property("Transform").property("Position").setValueAtTime(0.35, [-260, 620]);
+    topSweep.property("Transform").property("Position").setValueAtTime(6.4, [2200, 190]);
     app.endUndoGroup();
 })();
-

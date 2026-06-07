@@ -37,8 +37,14 @@
         var node = addCircle("Node " + names[i], [x, y], 78, [0.1, 0.72, 0.62]);
         addText("Label " + names[i], names[i], [x, y + 12], 30);
         node.property("Transform").property("Position").expression =
-            "origin = [960, 540]; r = length(value - origin); a = Math.atan2(value[1]-origin[1], value[0]-origin[0]) + time * 0.18; origin + [Math.cos(a)*r, Math.sin(a)*r*0.62];";
+            "origin = [960, 540]; r = length(value - origin); a = Math.atan2(value[1]-origin[1], value[0]-origin[0]) + time * 0.35; origin + [Math.cos(a)*r, Math.sin(a)*r*0.62];";
     }
+    var comet = addCircle("Orbit Comet", [575, 390], 96, [1, 0.42, 0.12]);
+    comet.property("Transform").property("Opacity").setValue(72);
+    comet.property("Transform").property("Position").setValueAtTime(0.6, [575, 390]);
+    comet.property("Transform").property("Position").setValueAtTime(2.3, [1345, 390]);
+    comet.property("Transform").property("Position").setValueAtTime(4.0, [1345, 690]);
+    comet.property("Transform").property("Position").setValueAtTime(5.7, [575, 690]);
     for (var j = 0; j < 4; j++) {
         var connector = comp.layers.addShape();
         connector.name = "Connector " + (j + 1);
@@ -47,4 +53,3 @@
     }
     app.endUndoGroup();
 })();
-

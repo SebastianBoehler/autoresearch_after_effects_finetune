@@ -1,0 +1,169 @@
+{
+  "cases": [
+    {
+      "case_id": "lower_third_news_ribbon",
+      "template": "lower_third_news_ribbon.jsx",
+      "prompt": "Create a 6-second broadcast-style lower third with a sliding nameplate, section tag, headline, and animated underline.",
+      "tags": [
+        "synthetic-v1",
+        "lower-third",
+        "broadcast",
+        "typography",
+        "keyframes"
+      ],
+      "must_contain": [
+        "app.project.items.addComp",
+        "layers.addText",
+        "setValueAtTime",
+        "ADBE Vector Shape - Rect"
+      ],
+      "must_not_contain": [
+        "app.quit(",
+        "system.callSystem",
+        "fetch(",
+        "XMLHttpRequest"
+      ],
+      "expected": {
+        "comp_name": "AEFT Lower Third News Ribbon",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 6,
+        "frame_rate": 30,
+        "min_layers": 6,
+        "render_frame": 60
+      }
+    },
+    {
+      "case_id": "radial_countdown_timer",
+      "template": "radial_countdown_timer.jsx",
+      "prompt": "Create a 5-second radial countdown timer with a circular progress ring, centered number, and subtle pulse expression.",
+      "tags": [
+        "synthetic-v1",
+        "timer",
+        "radial",
+        "expressions",
+        "shape-layers"
+      ],
+      "must_contain": [
+        "app.project.items.addComp",
+        "ADBE Vector Shape - Ellipse",
+        "ADBE Vector Filter - Trim",
+        ".expression"
+      ],
+      "must_not_contain": [
+        "app.quit(",
+        "system.callSystem",
+        "fetch(",
+        "XMLHttpRequest"
+      ],
+      "expected": {
+        "comp_name": "AEFT Radial Countdown Timer",
+        "width": 1080,
+        "height": 1080,
+        "duration_seconds": 5,
+        "frame_rate": 30,
+        "min_layers": 4,
+        "render_frame": 75
+      }
+    },
+    {
+      "case_id": "parallax_card_stack",
+      "template": "parallax_card_stack.jsx",
+      "prompt": "Create a 7-second parallax card-stack animation with three overlapping content cards, staggered slide-in motion, and soft drop shadows.",
+      "tags": [
+        "synthetic-v1",
+        "cards",
+        "parallax",
+        "ui-motion",
+        "keyframes"
+      ],
+      "must_contain": [
+        "app.project.items.addComp",
+        "effect.addProperty",
+        "setValueAtTime",
+        "layers.addText"
+      ],
+      "must_not_contain": [
+        "app.quit(",
+        "system.callSystem",
+        "fetch(",
+        "XMLHttpRequest"
+      ],
+      "expected": {
+        "comp_name": "AEFT Parallax Card Stack",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 7,
+        "frame_rate": 30,
+        "min_layers": 9,
+        "render_frame": 80
+      }
+    },
+    {
+      "case_id": "code_step_explainer",
+      "template": "code_step_explainer.jsx",
+      "prompt": "Create an 8-second code-step explainer with three code rows, a moving highlight bar, and a blinking cursor.",
+      "tags": [
+        "synthetic-v1",
+        "code",
+        "explainer",
+        "typography",
+        "expressions"
+      ],
+      "must_contain": [
+        "app.project.items.addComp",
+        "layers.addText",
+        "setValueAtTime",
+        ".expression"
+      ],
+      "must_not_contain": [
+        "app.quit(",
+        "system.callSystem",
+        "fetch(",
+        "XMLHttpRequest"
+      ],
+      "expected": {
+        "comp_name": "AEFT Code Step Explainer",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 8,
+        "frame_rate": 30,
+        "min_layers": 8,
+        "render_frame": 100
+      }
+    },
+    {
+      "case_id": "comparison_bar_race",
+      "template": "comparison_bar_race.jsx",
+      "prompt": "Create a 7-second comparison bar-race chart with four categories, animated horizontal bars, numeric labels, and a clean title.",
+      "tags": [
+        "synthetic-v1",
+        "chart",
+        "bar-race",
+        "data-visualization",
+        "keyframes"
+      ],
+      "must_contain": [
+        "app.project.items.addComp",
+        "setValueAtTime",
+        "ADBE Vector Shape - Rect",
+        "layers.addText"
+      ],
+      "must_not_contain": [
+        "app.quit(",
+        "system.callSystem",
+        "fetch(",
+        "XMLHttpRequest"
+      ],
+      "expected": {
+        "comp_name": "AEFT Comparison Bar Race",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 7,
+        "frame_rate": 30,
+        "min_layers": 12,
+        "render_frame": 95
+      }
+    }
+  ]
+}

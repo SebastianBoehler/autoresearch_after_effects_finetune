@@ -16,6 +16,23 @@
         return group;
     }
 
+    function addRect(name, pos, size, color) {
+        var layer = comp.layers.addShape();
+        layer.name = name;
+        var group = layer.property("Contents").addProperty("ADBE Vector Group");
+        var rect = group.property("Contents").addProperty("ADBE Vector Shape - Rect");
+        rect.property("ADBE Vector Rect Size").setValue(size);
+        var fill = group.property("Contents").addProperty("ADBE Vector Graphic - Fill");
+        fill.property("ADBE Vector Fill Color").setValue(color);
+        layer.property("Transform").property("Position").setValue(pos);
+        return layer;
+    }
+
+    var sweep = addRect("Countdown Color Wash", [-140, 540], [260, 960], [0.95, 0.12, 0.32]);
+    sweep.property("Transform").property("Rotation").setValue(24);
+    sweep.property("Transform").property("Opacity").setValue(34);
+    sweep.property("Transform").property("Position").setValueAtTime(0.6, [-140, 540]);
+    sweep.property("Transform").property("Position").setValueAtTime(4.4, [1220, 540]);
     addRing("Background Ring", 310, [0.12, 0.16, 0.22], 22);
     var progress = addRing("Progress Ring", 310, [0.18, 0.78, 1], 28);
     var trim = progress.property("Contents").addProperty("ADBE Vector Filter - Trim");
@@ -35,4 +52,3 @@
     label.property("Transform").property("Position").setValue([540, 700]);
     app.endUndoGroup();
 })();
-

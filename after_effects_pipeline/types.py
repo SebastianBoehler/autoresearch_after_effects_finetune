@@ -91,7 +91,7 @@ class AfterEffectsRuntimeConfig:
     app_name: str = "Adobe After Effects 2026"
     aerender_path: str | None = "/Applications/Adobe After Effects 2026/aerender"
     composition_name_fallback: str = "Generated Comp"
-    output_extension: str = "mov"
+    output_extension: str = "mp4"
 
 
 @dataclass
@@ -155,4 +155,3 @@ class ExperimentConfig:
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
-

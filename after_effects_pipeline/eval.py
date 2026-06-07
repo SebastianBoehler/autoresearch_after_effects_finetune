@@ -3,7 +3,11 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-from after_effects_pipeline.ae_runtime import run_live_check
+from after_effects_pipeline.ae_runtime import (
+    describe_live_preflight_error,
+    preflight_live_runtime,
+    run_live_check,
+)
 from after_effects_pipeline.dataset_sources import load_source_records
 from after_effects_pipeline.quality import score_case, summarize_scores
 from after_effects_pipeline.static_check import extract_code
@@ -26,6 +30,15 @@ def verify_source_cases(
     render_enabled = config.evaluation.run_render if run_render is None else run_render
     live_dir = repo_root / "artifacts" / "ae_live_checks"
     results: list[dict[str, Any]] = []
+
+    if live_enabled:
+        preflight = preflight_live_runtime(
+            runtime=config.evaluation.runtime,
+            output_dir=live_dir,
+            timeout_seconds=config.evaluation.max_seconds,
+        )
+        if not preflight["ok"]:
+            raise RuntimeError(describe_live_preflight_error(preflight))
 
     for case in selected:
         code = extract_code(case["completion"])
@@ -56,4 +69,3 @@ def verify_source_cases(
     }
     write_json(output_path, payload)
     return payload
-
