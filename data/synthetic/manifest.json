@@ -1,19 +1,106 @@
 {
-  "includes": [
-    "manifests/synthetic_v1a.json",
-    "manifests/synthetic_v1b.json",
-    "manifests/synthetic_v2.json",
-    "manifests/synthetic_v3.json",
-    "manifests/synthetic_v4.json",
-    "manifests/synthetic_v5.json",
-    "manifests/synthetic_v6.json",
-    "manifests/synthetic_v7.json",
-    "manifests/synthetic_v8.json",
-    "manifests/synthetic_v9.json",
-    "manifests/synthetic_v10.json",
-    "manifests/synthetic_v11.json",
-    "manifests/synthetic_v12.json",
-    "manifests/synthetic_v13.json",
-    "manifests/synthetic_v14.json"
+  "cases": [
+    {
+      "case_id": "pro_motion_trailer_intro",
+      "template": "pro_motion_trailer_intro.jsx",
+      "prompt": "Create a 12-second premium editorial motion-graphics trailer with fast shutter cuts, bold typography, grid structure, readable secondary copy, impact flashes, and final title lockup.",
+      "tags": ["curated", "trailer", "editorial", "typography", "fast-cuts", "shape-layers", "text-animators"],
+      "must_contain": ["app.project.items.addComp", "layers.addText", "ADBE Vector Shape - Rect", "setValueAtTime", "setTemporalEaseAtKey"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Editorial Motion Trailer",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 12,
+        "frame_rate": 30,
+        "render_frame": 180
+      },
+      "inspiration_sources": ["first-party curated AE trailer iteration", "premium editorial motion design conventions", "owned synthetic typography system"]
+    },
+    {
+      "case_id": "aether_observatory_trailer",
+      "template": "aether_observatory_trailer.jsx",
+      "prompt": "Create a 12-second brutalist constructivist motion trailer with concrete-toned mass, red slab cuts, heavy typography, manifesto cards, kinetic word stacks, and a final locked title frame.",
+      "tags": ["curated", "trailer", "brutalist", "constructivist", "slab-cuts", "typography", "shape-layers"],
+      "must_contain": ["app.project.items.addComp", "layers.addText", "ADBE Vector Shape - Rect", "setValueAtTime", "setTemporalEaseAtKey"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Brutalist Constructivism Trailer",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 12,
+        "frame_rate": 30,
+        "render_frame": 180
+      },
+      "inspiration_sources": ["first-party curated AE trailer iteration", "brutalist graphic-design motion language", "owned synthetic constructivist title system"]
+    },
+    {
+      "case_id": "celestial_clockwork_luxury_trailer",
+      "template": "celestial_clockwork_luxury_trailer.jsx",
+      "prompt": "Create a 12-second luxury 3D clockwork motion trailer with camera movement, lights, null-rigged rings, trim paths, repeater details, aperture cuts, premium typography, and a clean final title card.",
+      "tags": ["curated", "trailer", "luxury", "3d", "camera", "lights", "trim-paths", "repeater", "text-animators"],
+      "must_contain": ["layers.addCamera", "layers.addLight", "layers.addNull", "threeDLayer = true", "ADBE Vector Filter - Trim"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Chronos Luxury Clockwork",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 12,
+        "frame_rate": 30,
+        "render_frame": 180
+      },
+      "inspiration_sources": ["first-party curated AE trailer iteration", "premium watch and luxury-launch motion conventions", "owned synthetic 3D rig and trim-path system"]
+    },
+    {
+      "case_id": "festival_signal_trailer",
+      "template": "festival_signal_trailer.jsx",
+      "prompt": "Create a 13-second high-energy music festival trailer with stage-light sweeps, beat-cut strobes, ticket-tear wipes, equalizer bars, vinyl iris transition, lineup montage, and a final festival title frame.",
+      "tags": ["curated", "trailer", "music-festival", "fast-cuts", "stage-lights", "expressions", "text-animators", "shape-layers"],
+      "must_contain": ["app.project.items.addComp", "layers.addText", "ADBE Vector Shape - Rect", ".expression", "setTemporalEaseAtKey"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Festival Signal Trailer",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 13,
+        "frame_rate": 30,
+        "render_frame": 195
+      },
+      "inspiration_sources": ["first-party curated AE trailer iteration", "concert-promo and live-show motion conventions", "owned synthetic festival title package"]
+    },
+    {
+      "case_id": "executive_strategy_trailer",
+      "template": "executive_strategy_trailer.jsx",
+      "prompt": "Create a 12-second serious executive strategy motion trailer with clean business pacing, board priorities, chart-line draw-on, KPI rows, risk matrix, controlled transitions, and final market-leadership frame.",
+      "tags": ["curated", "trailer", "business", "strategy", "chart-line", "kpi", "trim-paths", "repeater", "text-animators"],
+      "must_contain": ["app.project.items.addComp", "layers.addText", "ADBE Vector Filter - Trim", "ADBE Vector Filter - Repeater", ".expression"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Executive Strategy Trailer",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 12,
+        "frame_rate": 30,
+        "render_frame": 180
+      },
+      "inspiration_sources": ["first-party curated AE trailer iteration", "executive presentation and market strategy motion conventions", "owned synthetic business trailer system"]
+    },
+    {
+      "case_id": "spatial_launch_system_trailer",
+      "template": "spatial_launch_system_trailer.jsx",
+      "prompt": "Create a 13-second 3D spatial launch-system trailer with a central launch core, gantry rails, floor ruler, camera push, lights, trim-path vectors, null-rigged 3D architecture, and final title frame.",
+      "tags": ["curated", "trailer", "3d", "camera", "lights", "null-rig", "spatial", "trim-paths", "repeater", "motion-graphics"],
+      "must_contain": ["layers.addCamera", "layers.addLight", "layers.addNull", "threeDLayer = true", "ADBE Vector Filter - Trim"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Spatial Launch System",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 13,
+        "frame_rate": 30,
+        "render_frame": 195
+      },
+      "inspiration_sources": ["first-party curated AE trailer iteration", "3D architectural motion-graphics launch conventions", "owned synthetic camera and gantry system"]
+    }
   ]
 }

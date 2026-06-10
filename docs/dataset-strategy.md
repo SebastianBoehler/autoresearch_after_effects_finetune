@@ -7,9 +7,8 @@ it grows.
 
 Use first-party generated samples first:
 
-- source templates under `data/synthetic/templates/`
-- metadata packs under `data/synthetic/manifests/`, included by
-  `data/synthetic/manifest.json`
+- the six curated trailer templates under `data/synthetic/templates/`
+- direct case metadata in `data/synthetic/manifest.json`
 - canonical JSONL from `scripts/build_synthetic_dataset.py`
 - manually reviewed model generations only after static or live verification
 
@@ -24,25 +23,16 @@ Motionstyles, Gumroad, and similar
 collections to identify workflow categories, UI patterns, and prompt ideas,
 not to copy implementation code.
 
-Useful reference categories include:
+Useful reference categories for future curated samples include:
 
-- shape-layer helpers, path tools, tapering, and alignment panels
-- caption import, styling, timing, and subtitle animation
-- one-click text, type, placeholder, and image-replacement systems
-- seamless loops, motion trails, speed lines, and preset orchestration
-- renderable broadcast, timeline, dashboard, and social-template builders
-- trailer openers, logo stings, sports scorebugs, music visualizers,
-  ecommerce story promos, science explainers, documentary title cards,
-  travel stories, listing promos, split-screen launch openers, weather
-  broadcast packs, finance reels, healthcare explainers, and fashion lookbooks
-- pixel/voxel glitch titles, luxury product macro ads, conference agenda promos,
-  vertical fitness challenges, documentary archive scans, AI/network explainers,
-  trailer credits builders, object callout systems, grunge brush title reveals,
-  waving flag openers, broadcast stream packs, and photo/logo placeholder
-  reveals
+- premium trailer openers with multi-scene structure and fast transitions
+- readable kinetic typography, captions, and final title lockups
+- shape-layer systems, trim paths, repeaters, tapered strokes, and masks
+- camera, light, null-rig, and 3D-layer motion systems
+- business, festival, luxury, spatial, editorial, and constructivist styles
 
-Keep manifest packs and templates under 300 LOC. Add a new manifest pack when a
-category expansion would make an existing file too large.
+Keep every template under 300 LOC. Add a new curated template only after it has
+a distinct theme, distinct motion grammar, and clear API coverage value.
 
 ## Promotion Rules
 
@@ -85,8 +75,9 @@ layout risk, effects, 3D/camera usage, and procedural-motion strengths.
 `scripts/build_ae_manual_harnesses.py` consumes that report when present, so
 the generated AE scripts start with the highest-value missing renders. Use
 `--limit` with a separate output directory for a short first manual pass.
-Use `configs/lfm25_8b_a1b_after_effects_train_ready.json` for actual LoRA
-training runs until the missing v9-v12 renders are generated and promoted.
+Use `configs/lfm25_8b_a1b_after_effects_train_ready.json` only when training
+should consume visually promoted render rows instead of the six source-curated
+templates.
 Run `scripts/preflight_train_ready_training.py` before training to verify split
 files, chat-message shape, MLX availability, and the exact `mlx_lm lora`
 command without starting a long run.
