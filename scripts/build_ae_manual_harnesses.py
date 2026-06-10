@@ -213,10 +213,12 @@ def _case_block(record: dict[str, Any]) -> str:
     case_dir = REPO_ROOT / "artifacts/ae_live_checks" / case_id
     code = _indent(extract_code(record["completion"]), "        ")
     comp_name = record.get("expected", {}).get("comp_name", "")
+    asset_root = REPO_ROOT / "data" / "synthetic" / "assets"
     return f"""
     try {{
         resetProject();
         ensureFolder({_js(str(case_dir))});
+        $.global.AEFT_ASSET_ROOT = {_js(str(asset_root))};
 {code}
         var comp = findCompByName({_js(comp_name)}) || firstComp();
         app.project.save(new File({_js(str(case_dir / "project.aep"))}));

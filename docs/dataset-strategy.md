@@ -7,7 +7,7 @@ it grows.
 
 Use first-party generated samples first:
 
-- the six curated trailer templates under `data/synthetic/templates/`
+- the curated trailer templates under `data/synthetic/templates/`
 - direct case metadata in `data/synthetic/manifest.json`
 - canonical JSONL from `scripts/build_synthetic_dataset.py`
 - manually reviewed model generations only after static or live verification
@@ -29,7 +29,8 @@ Useful reference categories for future curated samples include:
 - readable kinetic typography, captions, and final title lockups
 - shape-layer systems, trim paths, repeaters, tapered strokes, and masks
 - camera, light, null-rig, and 3D-layer motion systems
-- business, festival, luxury, spatial, editorial, and constructivist styles
+- business, festival, luxury, spatial, editorial, constructivist, and biotech
+  styles
 
 Keep every template under 300 LOC. Add a new curated template only after it has
 a distinct theme, distinct motion grammar, and clear API coverage value.
@@ -76,7 +77,7 @@ layout risk, effects, 3D/camera usage, and procedural-motion strengths.
 the generated AE scripts start with the highest-value missing renders. Use
 `--limit` with a separate output directory for a short first manual pass.
 Use `configs/lfm25_8b_a1b_after_effects_train_ready.json` only when training
-should consume visually promoted render rows instead of the six source-curated
+should consume visually promoted render rows instead of the source-curated
 templates.
 Run `scripts/preflight_train_ready_training.py` before training to verify split
 files, chat-message shape, MLX availability, and the exact `mlx_lm lora`

@@ -101,6 +101,108 @@
         "render_frame": 195
       },
       "inspiration_sources": ["first-party curated AE trailer iteration", "3D architectural motion-graphics launch conventions", "owned synthetic camera and gantry system"]
+    },
+    {
+      "case_id": "diagnostic_intelligence_trailer",
+      "template": "diagnostic_intelligence_trailer.jsx",
+      "prompt": "Create a 13-second premium medical and biotech diagnostic intelligence trailer with a nested cell-atlas precomp, alpha scan matte, mask vignette, marker-timed scenes, biomarker trace, clinical metric cards, sequencing repeater strip, and final clinical signal lockup.",
+      "tags": ["curated", "trailer", "medical", "biotech", "diagnostic", "precomp", "masks", "track-matte", "markers", "trim-paths", "repeater", "expressions"],
+      "must_contain": ["app.project.items.addComp", "layers.addBoxText", "ADBE Mask Atom", "TrackMatteType.ALPHA", "MarkerValue", "ADBE Vector Filter - Repeater", ".expression"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Diagnostic Intelligence Trailer",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 13,
+        "frame_rate": 30,
+        "render_frame": 195
+      },
+      "inspiration_sources": ["OpenRouter Fable concept pass on 2026-06-10", "clinical research brand-film motion conventions", "owned synthetic diagnostic data-visualization system"]
+    },
+    {
+      "case_id": "data_driven_cohort_briefing",
+      "template": "data_driven_cohort_briefing.jsx",
+      "prompt": "Create a 12-second premium data-driven cohort briefing trailer that reads local JSON metrics, draws an animated timeline trace, generates metric cards from the data, and resolves assets through a local fixture path.",
+      "tags": ["curated", "asset-backed", "json", "data-driven", "cohort", "charts", "trim-paths", "expressions", "file-io"],
+      "must_contain": ["File($.fileName)", "JSON.parse", "cohort_metrics.json", "layers.addBoxText", "ADBE Vector Filter - Trim", "ADBE Vector Filter - Repeater"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Data Driven Cohort Briefing",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 12,
+        "frame_rate": 30,
+        "render_frame": 180
+      },
+      "inspiration_sources": ["owned local JSON fixture: data/synthetic/assets/cohort_metrics.json", "premium clinical dashboard motion conventions", "asset-backed AE scripting API coverage"]
+    },
+    {
+      "case_id": "product_sequence_launch_trailer",
+      "template": "product_sequence_launch_trailer.jsx",
+      "prompt": "Create a 12-second asset-backed product launch trailer that imports a local PNG image sequence, reveals it with an alpha matte, uses replaceSource for an imported plate, and finishes with a clean launch lockup.",
+      "tags": ["curated", "asset-backed", "png-sequence", "import-options", "replace-source", "track-matte", "product", "trailer"],
+      "must_contain": ["new ImportOptions", "app.project.importFile", "product_0001.png", "opts.sequence = true", "replaceSource", "TrackMatteType.ALPHA"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Product Sequence Launch Trailer",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 12,
+        "frame_rate": 30,
+        "render_frame": 180
+      },
+      "inspiration_sources": ["owned local PNG sequence fixture under data/synthetic/assets/product_sequence", "premium product-launch motion conventions", "asset-backed footage import API coverage"]
+    },
+    {
+      "case_id": "audio_reactive_beat_trailer",
+      "template": "audio_reactive_beat_trailer.jsx",
+      "prompt": "Create a 12-second audio-reactive trailer that imports a local WAV pulse, reads local beat-marker JSON, places comp markers, and animates beat-synced bursts and typography with expressions.",
+      "tags": ["curated", "asset-backed", "audio", "wav", "beat-markers", "markers", "expressions", "music-trailer"],
+      "must_contain": ["signal_pulse.wav", "beat_markers.json", "new ImportOptions", "app.project.importFile", "MarkerValue", ".expression"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Audio Reactive Beat Trailer",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 12,
+        "frame_rate": 30,
+        "render_frame": 180
+      },
+      "inspiration_sources": ["owned local WAV fixture: data/synthetic/assets/signal_pulse.wav", "owned beat marker JSON fixture", "audio and marker-driven AE scripting API coverage"]
+    },
+    {
+      "case_id": "geo_route_intelligence_trailer",
+      "template": "geo_route_intelligence_trailer.jsx",
+      "prompt": "Create a 13-second geo route intelligence trailer that reads local GeoJSON coordinates, projects them into a map-like path, animates the route with trim paths, labels the route, and builds a route data pane.",
+      "tags": ["curated", "asset-backed", "geojson", "data-driven", "route", "map", "trim-paths", "waypoints"],
+      "must_contain": ["route_points.geojson", "JSON.parse", "LineString", "ADBE Vector Filter - Trim", "layers.addBoxText", "setValueAtTime"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Geo Route Intelligence Trailer",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 13,
+        "frame_rate": 30,
+        "render_frame": 195
+      },
+      "inspiration_sources": ["owned local GeoJSON fixture: data/synthetic/assets/route_points.geojson", "map and logistics motion conventions", "data-driven path animation API coverage"]
+    },
+    {
+      "case_id": "procedural_material_lab",
+      "template": "procedural_material_lab.jsx",
+      "prompt": "Create a 12-second procedural material lab trailer that reads a local JSON palette, builds a nested material plate comp, applies built-in effects such as Fractal Noise and Glow, and animates a premium shader-like scan presentation.",
+      "tags": ["curated", "asset-backed", "materials", "effects", "fractal-noise", "glow", "nested-comp", "json"],
+      "must_contain": ["material_palette.json", "JSON.parse", "ADBE Fractal Noise", "ADBE Glow", "app.project.items.addComp", "layers.addBoxText"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Procedural Material Lab",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 12,
+        "frame_rate": 30,
+        "render_frame": 180
+      },
+      "inspiration_sources": ["owned local material palette JSON fixture", "procedural material and shader-look motion conventions", "built-in effects scripting API coverage"]
     }
   ]
 }

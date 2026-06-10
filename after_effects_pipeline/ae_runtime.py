@@ -206,6 +206,7 @@ def _build_harness(
   try {{
     removeGeneratedComps();
     removeCompsByName("{_jsx_string(comp_name)}");
+    $.global.AEFT_ASSET_ROOT = "{_jsx_path(Path(__file__).resolve().parents[1] / "data" / "synthetic" / "assets")}";
 {_indent(code, "    ")}
     var comp = findCompByName("{_jsx_string(comp_name)}");
     if (comp === null && app.project.numItems > 0) {{

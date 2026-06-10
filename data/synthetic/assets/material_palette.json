@@ -1,0 +1,9 @@
+{
+  "title": "MATERIAL RESPONSE LAB",
+  "swatches": [
+    {"name": "graphite", "rgb": [0.03, 0.04, 0.05], "roughness": 0.78},
+    {"name": "cyan-film", "rgb": [0.18, 0.82, 0.74], "roughness": 0.24},
+    {"name": "coral-signal", "rgb": [0.95, 0.24, 0.18], "roughness": 0.32},
+    {"name": "ceramic", "rgb": [0.88, 0.92, 0.9], "roughness": 0.64}
+  ]
+}

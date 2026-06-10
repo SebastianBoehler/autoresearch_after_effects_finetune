@@ -5,7 +5,7 @@ template code, preview text, or project structures into completions.
 
 ## Current Corpus
 
-The source corpus is intentionally small: six manually curated, owned trailer
+The source corpus is intentionally small: manually curated, owned trailer
 samples in `data/synthetic/templates/`, listed directly in
 `data/synthetic/manifest.json`.
 
@@ -39,6 +39,17 @@ more of the same:
 - a character-safe social promo using masks, mattes, and precomps
 - a broadcast graphics package with lower thirds, scorebug, and transitions
 - a dense but readable UI/HUD scene with camera parallax and expressions
+- a precomp-heavy science or product explainer that uses mattes and masks
+
+## Manual Review Notes
+
+- 2026-06-10: `product_sequence_launch_trailer.jsx` is kept as an
+  asset-backed API coverage checkpoint, but it is not visually accepted as a
+  high-quality curated sample yet. Manual review found the generated PNG
+  fixture frames and the trailer animation/design too weak and amateur. Before
+  promotion, replace the local product frames with higher-quality generated
+  texture/product graphics and redesign the motion language, transitions,
+  staging, and final lockup.
 
 ## Reference URLs
 

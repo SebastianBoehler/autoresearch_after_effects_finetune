@@ -1,0 +1,11 @@
+{
+  "title": "COHORT RESPONSE INDEX",
+  "subtitle": "precision diagnostic panel",
+  "metrics": [
+    {"label": "Sensitivity", "value": 98.7, "unit": "%"},
+    {"label": "Specificity", "value": 96.2, "unit": "%"},
+    {"label": "Response", "value": 3.18, "unit": "min"},
+    {"label": "Samples", "value": 24.0, "unit": "k"}
+  ],
+  "timeline": [0.18, 0.32, 0.48, 0.62, 0.79, 0.92, 0.98]
+}
