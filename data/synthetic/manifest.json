@@ -203,6 +203,40 @@
         "render_frame": 180
       },
       "inspiration_sources": ["owned local material palette JSON fixture", "procedural material and shader-look motion conventions", "built-in effects scripting API coverage"]
+    },
+    {
+      "case_id": "expression_control_rig_trailer",
+      "template": "expression_control_rig_trailer.jsx",
+      "prompt": "Create a 12-second professional expression-control rig trailer with a hidden null controller, Slider/Angle/Color controls, controller-driven expressions, repeater grid, pulse ring, scan blade, readout cells, and final rig lockup.",
+      "tags": ["curated", "control-rig", "expressions", "effect-controls", "slider-control", "angle-control", "color-control", "repeater", "trailer"],
+      "must_contain": ["layers.addNull", "ADBE Slider Control", "ADBE Angle Control", "ADBE Color Control", ".expression", "ADBE Vector Filter - Repeater"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Expression Control Rig Trailer",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 12,
+        "frame_rate": 30,
+        "render_frame": 180
+      },
+      "inspiration_sources": ["owned expression-control rig pattern", "motion-graphics control panel conventions", "AE effect-control and expression API coverage"]
+    },
+    {
+      "case_id": "type_animator_system_trailer",
+      "template": "type_animator_system_trailer.jsx",
+      "prompt": "Create a 12-second premium kinetic typography trailer using native After Effects text animators, range selectors, position/opacity/tracking/skew animation, editorial rules, shutter transitions, and a final type-system lockup.",
+      "tags": ["curated", "typography", "text-animators", "range-selectors", "kinetic-type", "editorial", "trailer"],
+      "must_contain": ["ADBE Text Animators", "ADBE Text Animator", "ADBE Text Selector", "ADBE Text Percent Start", "ADBE Text Position 3D", "ADBE Text Opacity"],
+      "must_not_contain": ["app.quit(", "system.callSystem", "fetch(", "XMLHttpRequest"],
+      "expected": {
+        "comp_name": "AEFT Type Animator System Trailer",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 12,
+        "frame_rate": 30,
+        "render_frame": 180
+      },
+      "inspiration_sources": ["owned kinetic typography system", "editorial motion-design type conventions", "AE text animator API coverage"]
     }
   ]
 }

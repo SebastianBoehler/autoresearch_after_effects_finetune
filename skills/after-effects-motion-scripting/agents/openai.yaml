@@ -1,0 +1,4 @@
+interface:
+  display_name: "After Effects Motion Scripting"
+  short_description: "Write polished AE JSX animation scripts"
+  default_prompt: "Use $after-effects-motion-scripting to create a polished After Effects JSX trailer script."
